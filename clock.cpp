@@ -184,7 +184,8 @@ void TakeCurrentTime()
 
 	sec_angle = secs*6;				// show current time
 	min_angle = minutes*6;
-	hour_angle = hours*6;
+	if (hours>11) hours = hours-12;
+	hour_angle = hours*30;
 
- //   printf("time now is %d,%d,%d", hours, minutes, secs);
+    printf("time now is %d:%d:%d", hours, minutes, secs);
 }
